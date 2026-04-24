@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela de Pontuação</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Tabela de Pontuação 
+     nome min = 3 max = 10
+     pontuação min = 0 max = 999 
+     posRanking
+     ordenarDesc: if (empatados == mesma posicao) - 1º posição - Maior posição
+    -->
+    <h1>Tabela de Pontuação</h1>
+    <table id = "tabela">
+        <tr>
+            <th>Nome</th>
+            <th>Pontuação</th>
+            <th>Ranking</th>
+        </tr>
+    </table>
+
+    <button id="crescente" onclick="bubbleSortCresc(pontuacao, nomes)">Crescente</button>
+    <button id="decrescrente" onclick="bubbleSortDesc(pontuacao, nomes)">Decrescrente</button>
+
+    <h2>Formulário</h2>
+    <div id = "form" >
+        <input id = "inputNome" type="text" placeholder="Nome" minlength = "3" maxlength="10" required>
+        <input id = "inputRanking" type="number" placeholder="Pontuação" min = "0" max = "999" required>
+        <input type="submit" value="Submit" onclick = "adicionar()">
+    </div>
+
+    <!-- plus
+    localStorage href = "code.js"
+    -->
+    <script src = "code.js"> </script>
+</body>
+</html>
