@@ -22,7 +22,7 @@ O projeto permite cadastrar jogadores, somar pontuações, apagar jogadores, ord
 - CSS3
 - JavaScript
 - LocalStorage
-- 
+  
 ## Como funciona a lógica do ranking
 
 - O vetor `listPerson` armazena a lista principal de jogadores e é o vetor salvo no `localStorage`.
