@@ -6,7 +6,7 @@ O vetor ranking é utilizado para controlar a exibição da tabela sem alterar d
 
 Dessa forma, listPerson permanece como a base principal de dados, enquanto ranking funciona como uma visão ordenada dos jogadores para exibição na tabela.
 
-A variável ordemRanking armazena a última ordem escolhida pelo usuário, podendo ser "crescente" ou "decrescente". Esse valor também é salvo no localStorage para que, ao recarregar a página, a tabela continue sendo exibida na última configuração selecionada.
+A variável ordemRanking armazena a última ordem escolhida pelo usuário, podendo ser "crescente" ou "decrescente". Esse valor também é salvo no localStorage para que, ao recarregar a página, a tabela continue sendo exibida na última configuração selecionada. Caso não exista nenhuma ordem salva, o valor padrão utilizado será `"crescente"`.
 
 O ranking real é sempre calculado considerando a maior pontuação como a melhor posição. A diferença entre crescente e decrescente afeta apenas a forma de exibição da tabela, não a posição real dos jogadores.
 
