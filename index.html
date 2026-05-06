@@ -7,34 +7,38 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Tabela de Pontuação 
-     nome min = 3 max = 10
-     pontuação min = 0 max = 999 
-     posRanking
-     ordenarDesc: if (empatados == mesma posicao) - 1º posição - Maior posição
-    -->
     <h1>Tabela de Pontuação</h1>
     <table id = "tabela">
-        <tr>
-            <th>Nome</th>
-            <th>Pontuação</th>
-            <th>Ranking</th>
-        </tr>
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Pontuação</th>
+                <th>Ranking</th>
+            </tr>
+        </thead>
+        <tbody id="tabelaBody">
+
+        </tbody>
     </table>
 
-    <button id="crescente" onclick="bubbleSortCresc(pontuacao, nomes)">Crescente</button>
-    <button id="decrescrente" onclick="bubbleSortDesc(pontuacao, nomes)">Decrescrente</button>
+    <button id="crescente" onclick="rankingCrescente()">Crescente</button>
+    <button id="decrescente" onclick="rankingDecrescente()">Decrescrente</button>
 
-    <h2>Formulário</h2>
-    <div id = "form" >
-        <input id = "inputNome" type="text" placeholder="Nome" minlength = "3" maxlength="10" required>
-        <input id = "inputRanking" type="number" placeholder="Pontuação" min = "0" max = "999" required>
-        <input type="submit" value="Submit" onclick = "adicionar()">
-    </div>
-
-    <!-- plus
-    localStorage href = "code.js"
-    -->
-    <script src = "code.js"> </script>
+    <h2>Adicionar Pontuação</h2>
+    <form id = "formUsuario" >
+        <input type="text" id = "inputNome"  placeholder="Nome" minlength = "3" maxlength="20" required>
+        <input type="number" id = "inputPontuacao"  placeholder="Pontuação" min = "1" max = "999" required>
+        <input type="submit" value="Submit">
+    </form>
+    <div id = "text-formUsuario"></div>
+    
+    <h2>Apagar Jogador</h2>
+    <form id = "formApagarJogador" >
+        <input type="text" id = "inputNomeApagar"  placeholder="Nome" minlength = "3" maxlength="20" required>
+        <input type="submit" value="Submit">
+    </form>
+    <div id = "text-FormApagar"></div>
+    
+    <script src = "script.js"> </script>
 </body>
 </html>
