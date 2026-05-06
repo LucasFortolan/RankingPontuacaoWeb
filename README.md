@@ -32,6 +32,20 @@ ranking-pontuacao-web/
 ├── style.css
 └── script.js
 
+## Como funciona a lógica do ranking
+
+O vetor `listPerson` armazena a lista principal de jogadores e é o vetor salvo no `localStorage`.
+
+O vetor `ranking` é utilizado para controlar a exibição da tabela sem alterar diretamente a ordem original de `listPerson`. Ele é criado a partir de `listPerson` usando `toSorted()`, gerando um novo vetor ordenado, mas mantendo referência aos mesmos objetos dos jogadores.
+
+Dessa forma, `listPerson` permanece como a base principal de dados, enquanto `ranking` funciona como uma visão ordenada dos jogadores para exibição na tabela.
+
+A variável `ordemRanking` armazena a última ordem escolhida pelo usuário, podendo ser `"crescente"` ou `"decrescente"`. Esse valor também é salvo no `localStorage` para que, ao recarregar a página, a tabela continue sendo exibida na última configuração selecionada.
+
+O ranking real é sempre calculado considerando a maior pontuação como a melhor posição. A diferença entre crescente e decrescente afeta apenas a forma de exibição da tabela, não a posição real dos jogadores.
+
+No projeto, o vetor `ranking` é mantido em ordem decrescente, pois essa é a ordem real de classificação. Quando a exibição crescente é selecionada, a tabela apenas percorre esse vetor no sentido inverso, evitando uma nova ordenação apenas para mudar a visualização, evitando custo de adicional de processamento para mudar a ordenação.
+
 ## Regras do sistema
 
 ### Cadastro de jogador
